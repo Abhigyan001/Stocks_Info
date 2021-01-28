@@ -1,9 +1,9 @@
-/* eslint-disable max-len */
 import React from 'react';
 import { Jumbotron, Container } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import { BsFillForwardFill } from 'react-icons/bs';
 import { FcBullish } from 'react-icons/fc';
-import PropTypes from 'prop-types';
+import notFound from '../imgs/not_found.jpg';
 
 export default function StockDetail({ stockItem }) {
   return (
@@ -35,7 +35,14 @@ export default function StockDetail({ stockItem }) {
             <hr />
           </h4>
           <p className="lead text-justify readMaxLength">
-            <img src={stockItem.image} alt={stockItem.symbol} className="float-left m-2" />
+            <img
+              src={stockItem.image}
+              alt={stockItem.symbol}
+              onError={e => {
+                e.target.src = notFound;
+              }}
+              className="float-left m-2 img-thumbnail w-25"
+            />
             { stockItem.description }
             <a href={stockItem.website} target="__blank" rel="noopener">
               {' '}
@@ -50,14 +57,14 @@ export default function StockDetail({ stockItem }) {
 
 StockDetail.propTypes = {
   stockItem: PropTypes.shape({
-    symbol: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    changes: PropTypes.number.isRequired,
-    companyName: PropTypes.string.isRequired,
-    industry: PropTypes.string.isRequired,
-    website: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    symbol: PropTypes.string,
+    price: PropTypes.number,
+    changes: PropTypes.number,
+    companyName: PropTypes.string,
+    industry: PropTypes.string,
+    website: PropTypes.string,
+    description: PropTypes.string,
+    image: PropTypes.string,
   }),
 };
 
