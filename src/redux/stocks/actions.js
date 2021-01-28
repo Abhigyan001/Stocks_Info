@@ -16,18 +16,7 @@ export const fetchStocksFailure = error => ({
   payload: error,
 });
 
-export const fetchStockQuotes = ticker => function (dispatch) {
-  axios
-    .get(stockQuoteUrl(ticker), { mode: 'cors' })
-    .then(response => {
-      const { data } = response;
-      dispatch(fetchStocksSuccess({ data }));
-    })
-    .catch(error => {
-      dispatch(fetchStocksFailure(error.message));
-    });
-};
-
+// eslint-disable-next-line func-names
 export const fetchStocks = () => function (dispatch) {
   dispatch(fetchStocksRequest());
   axios
@@ -38,5 +27,5 @@ export const fetchStocks = () => function (dispatch) {
     })
     .catch(error => {
       dispatch(fetchStocksFailure(error.message));
-  });
+    });
 };

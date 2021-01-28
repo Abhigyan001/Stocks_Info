@@ -16,13 +16,14 @@ export const fetchStockItemFailure = error => ({
   payload: error,
 });
 
+// eslint-disable-next-line func-names
 export const fetchStockItem = symbol => function (dispatch) {
   dispatch(fetchStockItemRequest());
   axios
     .get(stockProfileUrl(symbol), { mode: 'cors' })
     .then(response => {
       const { data } = response;
-      dispatch(fetchStockItemSuccess({ data }));
+      dispatch(fetchStockItemSuccess(data[0]));
     })
     .catch(error => {
       dispatch(fetchStockItemFailure(error.message));
