@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import Footer from '../components/Footer';
-import TopNav from '../components/TopNav';
+import TopNav from '../components/Nav';
 import StockDetailsContainer from '../container/StockDetailsContainer';
 
 export default function Detailpage() {
