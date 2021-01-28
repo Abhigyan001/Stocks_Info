@@ -2,10 +2,10 @@ body {
   background-color: rgba(178, 228, 230, 0.5);
 }
 
-.img {
+.blendMul {
   mix-blend-mode: overlay;
 }
 
-.price {
+.dayPrice {
   list-style-type: none;
 }

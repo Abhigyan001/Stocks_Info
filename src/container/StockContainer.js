@@ -1,20 +1,36 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { ScaleLoader } from 'react-spinners';
 import StockInfo from '../components/StockInfo';
+import { fetchStocks } from '../redux/stocks/actions';
 
-export default function Stockcontainer() {
-  const apple = {
-    symbol: 'AAPL',
-    price: 350.03,
-    percentage: 0.55,
-    company: 'Apple Inc',
-  };
+function Stockcontainer({ stockData, fetchStocks }) {
+  useEffect(() => {
+    fetchStocks();
+  }, []);
 
-  return (
+  return stockData.loading ? (
+    <h2 className="text-center pt-5">
+      <ScaleLoader size={16} color="white" />
+    </h2>
+  ) : (
     <div className="mt-5 d-flex flex-wrap justify-content-center">
-      <StockInfo stock={apple} />
-      <StockInfo stock={apple} />
-      <StockInfo stock={apple} />      
-      <StockInfo stock={apple} />      
+      { stockData.stocks.map(stockInfo => (
+        <StockInfo key={stockInfo.ticker} stock={stockInfo} />
+      )) }
     </div>
   );
 }
+
+const mapStateToProps = state => ({
+  stockData: state.stocks,
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchStocks: () => dispatch(fetchStocks()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Stockcontainer);
