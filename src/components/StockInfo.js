@@ -5,7 +5,6 @@ import { BsGraphDown, BsGraphUp, BsFillForwardFill } from 'react-icons/bs';
 import notFound from '../imgs/not_found.jpg';
 
 function StockInfo({ stock }) {
-   
   const justPercent = stock.changesPercentage.match(/(-|\+)|(\.)|\d+/g).join('');
   const percentage = parseFloat(justPercent);
   return (
@@ -29,7 +28,7 @@ function StockInfo({ stock }) {
           {percentage > 0 ? <BsGraphUp /> : <BsGraphDown />}
         </Card.Text>
         <div className="mt-auto">
-          <Button variant="outline-success w-100">Details</Button>
+          <a href={`\\${stock.ticker}`} className="btn btn-outline-success w-100">Details</a>
         </div>
       </Card.Body>
     </Card>
