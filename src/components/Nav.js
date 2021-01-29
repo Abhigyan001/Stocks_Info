@@ -11,7 +11,8 @@ export default function TopNav({ handleOnSelect }) {
   return (
     <Navbar bg="dark" variant="dark">
       <Navbar.Brand href="/">STOCKIST</Navbar.Brand>
-      <Nav className="mr-auto">        
+      <Nav className="mr-auto">
+        <Nav.Link href="/">Home</Nav.Link>        
         <Nav.Link href="#pricing">Stock News</Nav.Link>
       </Nav>
       <Form inline>
@@ -20,7 +21,7 @@ export default function TopNav({ handleOnSelect }) {
           <option value="gainers">Most Gainers </option>
           <option value="losers">Most Losers </option>
         </Form.Control>
-        <Button variant="outline-success">Search</Button>
+        <Button variant="outline-success">Filter by category</Button>
       </Form>
     </Navbar>
   );
