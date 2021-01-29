@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { connect, useSelector } from 'react-redux';
 import { ScaleLoader } from 'react-spinners';
 import PropTypes from 'prop-types';
-import StockInfo from '../components/StockInfo';
-import { fetchStocks } from '../redux/stocks/actions';
+import Stockcard from '../components/StockCard';
+import { fetchStocks } from '../redux/stocks/stockActions';
 
 function StockContainer({ stockData, fetchStocks }) {
   const url = useSelector(state => state.urlType);
@@ -21,7 +21,7 @@ function StockContainer({ stockData, fetchStocks }) {
   ) : (
     <div className="mt-5 d-flex flex-wrap justify-content-center">
       { stockData.stocks.map(stockInfo => (
-        <StockInfo
+        <Stockcard
           key={stockInfo.ticker}
           stock={stockInfo}
         />

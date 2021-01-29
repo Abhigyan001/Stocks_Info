@@ -11,10 +11,9 @@ import {
 function TopNavTicker({ handleFormClick }) {
   return (
     <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="/">STOCKIST</Navbar.Brand>
+      <Navbar.Brand href="/">STOCK INFO</Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/news">Stock News</Nav.Link>
+        <Nav.Link href="/news">Market News</Nav.Link>
       </Nav>
       <Form inline onSubmit={handleFormClick}>
         <FormControl
@@ -23,7 +22,7 @@ function TopNavTicker({ handleFormClick }) {
           className="mr-sm-2"
           name="ticker"
         />
-        <Button type="submit" variant="outline-success">Search</Button>
+        <Button type="submit" variant="outline-info">Search</Button>
       </Form>
     </Navbar>
   );

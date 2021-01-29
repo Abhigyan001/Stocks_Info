@@ -4,26 +4,23 @@ import {
   Navbar,
   Nav,
   Form,
-  Button,
 } from 'react-bootstrap';
 
 function TopNav({ handleOnSelect }) {
   return (
     <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="/">STOCKIST</Navbar.Brand>
+      <Navbar.Brand href="/">STOCK INFO</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/news">Stock News</Nav.Link>
+          <Nav.Link href="/news">Market News</Nav.Link>
         </Nav>
         <Form inline>
           <Form.Control onChange={handleOnSelect} as="select" className="mr-sm-2">
-            <option value="active">Most Active </option>
-            <option value="gainers">Most Gainers </option>
-            <option value="losers">Most Losers </option>
+            <option value="active">Most Active Stocks</option>
+            <option value="gainers">Most Gaining Stocks </option>
+            <option value="losers">Most Losing Stocks </option>
           </Form.Control>
-          <Button variant="outline-success">Filter by category</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>

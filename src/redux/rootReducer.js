@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import stockReducer from './stocks/reducer';
 import stockItemReducer from './stockItem/stockItemReducer';
+import stockReducer from './stocks/stockReducer';
 import stockNewsReducer from './stockNews/stockNewsReducer';
 
-const mainReducer = combineReducers({
+const rootReducer = combineReducers({
   stocks: stockReducer,
   stockItem: stockItemReducer,
   stockNews: stockNewsReducer,
 });
 
-export default mainReducer;
+export default rootReducer;

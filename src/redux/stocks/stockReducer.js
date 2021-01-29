@@ -1,6 +1,6 @@
 import {
   FETCH_STOCK_REQUEST, FETCH_STOCK_SUCCESS, FETCH_STOCK_FAILURE,
-} from './types';
+} from './stockTypes';
 
 const initialState = {
   loading: false,

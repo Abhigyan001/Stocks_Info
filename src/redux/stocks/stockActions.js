@@ -1,8 +1,8 @@
 import axios from 'axios';
 import {
   FETCH_STOCK_REQUEST, FETCH_STOCK_SUCCESS, FETCH_STOCK_FAILURE,
-} from './types';
-import { STOCK_LIST_URL, STOCK_LOSERS, STOCK_GAINERS } from './urls';
+} from './stockTypes';
+import { STOCK_LIST_URL, STOCK_LOSERS, STOCK_GAINERS } from './stockUrls';
 
 export const fetchStocksRequest = () => ({
   type: FETCH_STOCK_REQUEST,
