@@ -1,9 +1,11 @@
-import { FETCH_STOCK_REQUEST, FETCH_STOCK_SUCCESS, FETCH_STOCK_FAILURE } from './types';
+import {
+  FETCH_STOCK_REQUEST, FETCH_STOCK_SUCCESS, FETCH_STOCK_FAILURE,
+} from './types';
 
 const initialState = {
   loading: false,
   stocks: [],
-  errors: '',
+  error: '',
 };
 
 const stockReducer = (state = initialState, action) => {
