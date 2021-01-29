@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { connect, useSelector } from 'react-redux';
 import { ScaleLoader } from 'react-spinners';
 import PropTypes from 'prop-types';
-import Stockcard from '../components/StockCard';
-import { fetchStocks } from '../redux/stocks/stockActions';
+import StockInfo from '../components/StockInfo';
+import { fetchStocks } from '../redux/stocks/actions';
 
 function StockContainer({ stockData, fetchStocks }) {
   const url = useSelector(state => state.urlType);
