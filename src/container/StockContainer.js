@@ -21,7 +21,7 @@ function StockContainer({ stockData, fetchStocks }) {
   ) : (
     <div className="mt-5 d-flex flex-wrap justify-content-center">
       { stockData.stocks.map(stockInfo => (
-        <Stockcard
+        <StockInfo
           key={stockInfo.ticker}
           stock={stockInfo}
         />

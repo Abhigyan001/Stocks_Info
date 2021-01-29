@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <span className="text-muted">
           &copy;
-          { ` ${(new Date()).getFullYear()} All rights reserved | site by Acushla Koncepts.`}
+          { ` ${(new Date()).getFullYear()} All rights reserved | site by Abhigyan Mahanta.`}
         </span>
       </div>
     </footer>
