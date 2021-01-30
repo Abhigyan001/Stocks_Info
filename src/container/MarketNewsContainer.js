@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { ScaleLoader } from 'react-spinners';
 import PropTypes from 'prop-types';
-import StockNews from '../components/StockNews';
+import News from '../components/News';
 import { fetchNews } from '../redux';
 
-function StockNewsContainer({ newsData, fetchNews }) {
+function MarketNewsContainer({ newsData, fetchNews }) {
   useEffect(() => {
     fetchNews();
   }, []);
@@ -20,7 +20,7 @@ function StockNewsContainer({ newsData, fetchNews }) {
   ) : (
     <div className="mt-5 d-flex flex-wrap justify-content-center ">
       {newsData.news.map(news => (
-        <StockNews
+        <News
           key={`${news.symbol}-${Math.floor(Math.random() * 11)}`}
           news={news}
         />
@@ -37,7 +37,7 @@ const mapDispatchToProps = dispatch => ({
   fetchNews: () => dispatch(fetchNews()),
 });
 
-StockNewsContainer.propTypes = {
+MarketNewsContainer.propTypes = {
   newsData: PropTypes.shape({
     news: PropTypes.shape([]),
     loading: PropTypes.bool,
@@ -46,8 +46,8 @@ StockNewsContainer.propTypes = {
   fetchNews: PropTypes.func.isRequired,
 };
 
-StockNewsContainer.defaultProps = {
+MarketNewsContainer.defaultProps = {
   newsData: {},
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(StockNewsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(MarketNewsContainer);

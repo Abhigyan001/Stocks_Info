@@ -4,7 +4,7 @@ import {
   Jumbotron, Container, Row, Col,
 } from 'react-bootstrap';
 
-function StockNews({ news }) {
+function News({ news }) {
   return (
     <Jumbotron fluid className="rounded mt-3 mb-2 ">
       <Container>
@@ -34,7 +34,7 @@ function StockNews({ news }) {
   );
 }
 
-StockNews.propTypes = {
+News.propTypes = {
   news: PropTypes.shape({
     image: PropTypes.string,
     symbol: PropTypes.string,
@@ -45,8 +45,8 @@ StockNews.propTypes = {
   }),
 };
 
-StockNews.defaultProps = {
+News.defaultProps = {
   news: {},
 };
 
-export default StockNews;
+export default News;

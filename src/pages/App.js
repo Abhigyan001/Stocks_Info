@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Container } from 'react-bootstrap';
-import TopNav from '../components/TopNav';
+import TopNav from '../components/Nav';
 import Footer from '../components/Footer';
 import Stockcontainer from '../container/StockContainer';
 import { fetchStocks } from '../redux/index';

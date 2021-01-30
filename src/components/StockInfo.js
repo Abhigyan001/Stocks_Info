@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { BsGraphDown, BsGraphUp, BsFillForwardFill } from 'react-icons/bs';
 
-function StockCard({ stock }) {
+function StockInfo({ stock }) {
   const justPercent = stock.changesPercentage.match(/(-|\+)|(\.)|\d+/g).join('');
   const percentage = parseFloat(justPercent);
   return (
@@ -26,7 +26,7 @@ function StockCard({ stock }) {
   );
 }
 
-StockCard.propTypes = {
+StockInfo.propTypes = {
   stock: PropTypes.shape({
     ticker: PropTypes.string.isRequired,
     companyName: PropTypes.string.isRequired,
@@ -36,4 +36,4 @@ StockCard.propTypes = {
   }).isRequired,
 };
 
-export default StockCard;
+export default StockInfo;
