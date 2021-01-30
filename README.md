@@ -1,4 +1,4 @@
-# STOCKINFO - REACT CAPSTONE PROJECT
+# STOCKSINFO - REACT CAPSTONE PROJECT
 
 This is a frontend web application, developed using React and Redux which shows a catalogue of financial values using [Stock API](https://financialmodelingprep.com/developer/docs/).
 
@@ -54,8 +54,6 @@ Jest is used to run all the tests found in this application
 In order to run the test you can simply type `yarn test` or `npm run test`
 
 # Authors
-
-👤 **Uduak Essien**
 
 👤 **Abhigyan Mahanta**​
 
