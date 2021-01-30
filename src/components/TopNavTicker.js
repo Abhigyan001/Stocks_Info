@@ -11,7 +11,7 @@ import {
 function TopNavTicker({ handleFormClick }) {
   return (
     <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="/">STOCK INFO</Navbar.Brand>
+      <Navbar.Brand href="/">STOCKS INFO</Navbar.Brand>
       <Nav className="mr-auto">
         <Nav.Link href="/news">Market News</Nav.Link>
       </Nav>

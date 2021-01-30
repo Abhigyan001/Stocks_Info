@@ -9,7 +9,7 @@ import {
 function TopNav({ handleOnSelect }) {
   return (
     <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="/">STOCK INFO</Navbar.Brand>
+      <Navbar.Brand href="/">STOCKS INFO</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
