@@ -14,7 +14,7 @@ The application features includes:
 ![screenshot]()
 
 ## Live Demo
-[Live Demo]()
+[Live Demo](https://newstocksdata.herokuapp.com/)
 
 ## Getting Started
 
