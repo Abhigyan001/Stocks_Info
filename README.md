@@ -11,7 +11,7 @@ The application features includes:
 - Shows lastest market news
 - Dynamic routes for individual stock item, example `/stocks/Gold`
 
-![screenshot]()
+![screenshot](./public/stockinfo.gif)
 
 ## Live Demo
 [Live Demo](https://newstocksdata.herokuapp.com/)
