@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Footer from '../components/Footer';
 import { render, screen } from '@testing-library/react';
+import Footer from '../components/Footer';
 import '@testing-library/jest-dom/extend-expect';
 
 it('renders Footer correctly', () => {
@@ -14,4 +14,3 @@ it('should display developer name', () => {
   const devName = screen.getByText(/Abhigyan/);
   expect(devName).toBeInTheDocument();
 });
-

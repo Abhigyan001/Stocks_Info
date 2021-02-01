@@ -9,7 +9,6 @@ it('renders TopNav correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-
 it('should display the heading', () => {
   const { getByTestId } = render(<TopNav />);
   expect(getByTestId('navbar-heading')).toHaveTextContent('STOCKS INFO');
