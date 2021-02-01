@@ -6,6 +6,7 @@ exports[`renders TopNav correctly 1`] = `
 >
   <a
     className="navbar-brand"
+    data-testid="navbar-heading"
     href="/"
   >
     STOCKS INFO
@@ -45,7 +46,6 @@ exports[`renders TopNav correctly 1`] = `
     >
       <select
         className="mr-sm-2 form-control"
-        onChange={[MockFunction]}
       >
         <option
           value="active"

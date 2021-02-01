@@ -40,7 +40,7 @@ npm install
 Setup your API Key
 
 - I used the [Financial Modelling Prep API](https://financialmodelingprep.com/developer/docs/). Signup and get your key.
-- Create `.env` file, open it and add `STOCKS_API_KEY=xxxxxxxxxxxxxxxxxxxxx`
+- Create `.env` file, open it and add `REACT_APP_API_KEY=xxxxxxxxxxxxxxxxxxxxx`
 
 ### Usage
 
